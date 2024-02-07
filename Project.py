@@ -20,5 +20,5 @@ Nummale=dt[dt['Sex']=='ชาย'].mode()
 NumFemale=dt[dt['Sex']=='หญิง'].mode()
 
 dtSex=[NumM,NumF]
-dtSexb=pd.DataFrame(dtSex)
+dtSexd=pd.DataFrame(dtSex)
 st.bar_chart(dtSexb)
