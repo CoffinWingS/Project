@@ -18,8 +18,8 @@ dt.pd.read_excel('data/DATA.xlsx')
 st.write(dt.head(1))
 
 #st.write
-Nummale=dt[dt['Sex']=='ชาย'].mode()
-NumFemale=dt[dt['Sex']=='หญิง'].mode()
+NumM=dt[dt['Sex']=='ชาย'].count()
+NumF=dt[dt['Sex']=='หญิง'].count()
 
 dtSex=[NumM,NumF]
 dtSexb=pd.DataFrame(dtSex)
