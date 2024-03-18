@@ -14,7 +14,7 @@ with col2:
     st.write("2,5600")
 
 
-dt=pd.read_excel('data/DATA.xlsx')
+df=pd.read_csv("./data/DATA.csv")
 
 # แสดงข้อมูลภาพรวม
 st.markdown("""
