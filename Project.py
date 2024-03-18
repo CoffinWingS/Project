@@ -16,6 +16,13 @@ with col2:
 
 dt=pd.read_csv("./data/DATA.csv")
 
+if(st.button("แสดงข้อมูลตัวอย่าง")):
+    st.write(dt.head(10))
+    st.button("ไม่แสดงข้อมูลตัวอย่าง")
+
+else:
+    st.button("ไม่แสดงข้อมูลตัวอย่าง")
+
 # แสดงข้อมูลภาพรวม
 st.markdown("""
 ข้อมูลสถิติการเกิดอุบัติเหตุในประเทศไทย 
