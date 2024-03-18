@@ -25,14 +25,6 @@ st.markdown("""
 
 st.write(dt.head(1))
 
-# เพิ่มตัวเลือกสำหรับผู้ใช้ในการกรองข้อมูล
-gender_option = st.sidebar.selectbox("เลือกเพศ", ["ชาย", "หญิง"])
-
-filtered_df = data[data["Sex"] == gender_option]
-
-# แสดงจำนวนผู้เสียชีวิตและบาดเจ็บแยกตามเพศ
-col1, col2 = st.columns(2)
-
 
 #st.write
 NumM=dt[dt['Sex']=='ชาย'].count()
