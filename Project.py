@@ -15,6 +15,9 @@ with col2:
 
 dt=pd.read_excel('data/DATA.xlsx')
 
+# แสดงชื่อเว็บแอปพลิเคชัน
+st.title("สถิติการเกิดอุบัติเหตุในประเทศไทย")
+
 st.write(dt.head(1))
 
 #st.write
