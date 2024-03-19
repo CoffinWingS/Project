@@ -29,8 +29,8 @@ else:
 st.title("สถิติการเกิดอุบัติเหตุในประเทศไทย")
 
 # เพิ่มตัวเลือกสำหรับผู้ใช้ในการเลือกปี
-#year_options = dt["Dead Year_ปีที่เสียชีวิต"].unique()
-#selected_year = st.sidebar.selectbox("เลือกปี", year_options)
+year_options = dt["Dead Year_ปีที่เสียชีวิต"].unique()
+selected_year = st.sidebar.selectbox("เลือกปี", year_options)
 
 # เพิ่มตัวเลือกสำหรับผู้ใช้ในการเลือกเพศ
 #gender_options = ["ชาย", "หญิง"]
