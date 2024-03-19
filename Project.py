@@ -1,6 +1,7 @@
 import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
+
 #st.image('')
 st.header("สถิติการเกิดอุบัติเหตุในประเทศไทย")
 
@@ -13,25 +14,9 @@ with col2:
     st.subheader("จำนวนผู้เสียชีวิต")
     st.write("2,5600")
 
-
-dt=pd.read_csv("./data/DATA.csv")
-
-if(st.button("แสดงข้อมูลตัวอย่าง")):
-    st.write(dt.head(10))
-    st.button("ไม่แสดงข้อมูลตัวอย่าง")
-
-else:
-    st.button("ไม่แสดงข้อมูลตัวอย่าง")
-
-# แสดงข้อมูลภาพรวม
-st.markdown("""
-ข้อมูลสถิติการเกิดอุบัติเหตุในประเทศไทย 
-ข้อมูลนี้ประกอบด้วยข้อมูลเกี่ยวกับจำนวนผู้เสียชีวิต 
-และจำนวนผู้บาดเจ็บจากอุบัติเหตุ แยกตามเพศ
-""")
+dt=pd.read_excel('data/DATA.xlsx')
 
 st.write(dt.head(1))
-
 
 #st.write
 NumM=dt[dt['Sex']=='ชาย'].count()
@@ -54,3 +39,4 @@ fig1, ax1 = plt.subplots()
 ax1.pie(sizes, explode=explode, labels=labels, autopct='%1.1f%%',
         shadow=True, startangle=90)
 st.pyplot(fig1)
+
