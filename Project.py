@@ -26,22 +26,6 @@ else:
     st.button("ไม่แสดงข้อมูลตัวอย่าง")
 
 
-# เพิ่มตัวเลือกสำหรับผู้ใช้ในการเลือกปี
-year_option = st.sidebar.selectbox("เลือกปี", dt["ปี"].unique())
-
-# กรองข้อมูลตามปี
-filtered_df = dt[dt["ปี"] == year_option]
-
-# แสดงกราฟแท่ง
-fig1, ax1 = plt.subplots()
-ax1.bar(filtered_df.groupby("Sex").size().index, filtered_df.groupby("Sex").size())
-ax1.set_xlabel("เพศ")
-ax1.set_ylabel("จำนวนผู้เสียชีวิต")
-st.pyplot(fig1)
-
-# แสดงข้อมูลตาราง
-st.dataframe(filtered_df.groupby("Sex").size().to_frame())
-
 #st.write
 NumM=dt[dt['Sex']=='ชาย'].count()
 NumF=dt[dt['Sex']=='หญิง'].count()
