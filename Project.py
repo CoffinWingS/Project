@@ -27,7 +27,7 @@ else:
 
 
 # เพิ่มตัวเลือกสำหรับผู้ใช้ในการเลือกปี
-year_option = st.sidebar.selectbox("เลือกปี", data["ปี"].unique())
+dt = st.sidebar.selectbox("เลือกปี", data["ปี"].unique())
 
 # กรองข้อมูลตามปี
 filtered_df = data[data["ปี"] == year_option]
