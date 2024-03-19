@@ -20,24 +20,9 @@ st.write(dt.head(10))
 
 if(st.button("แสดงข้อมูลตัวอย่าง")):
     st.write(dt.head(100))
-    st.button("ไม่แสดงข้อมูลตัวอย่าง")
 
 else:
     st.button("ปิดข้อมูล")
-
-
-if(st.button("แสดงกราฟแท่ง")):
-    chart_data = pd.DataFrame(
-    {
-        "ปีการเสียชีวิต": dt['Dead Year_ปีที่เสียชีวิต'],
-        "เพศ": dt['Sex'],
-       # "ความยาว": df['sepal.length']    
-        }
-    )
-    st.bar_chart(chart_data, x="ประเภทดอกไม้", y=["ความกว้าง","ความยาว"], color=["#FF0000", "#0000FF"])
-    st.button("ไม่แสดงข้อมูลสถิติ")
-else:
-    st.button("ไม่แสดงข้อมูลสถิติ")
 
 
 #st.write
@@ -52,7 +37,7 @@ dtSex=[NumM[1],NumF[1]]
 dtSexb=pd.DataFrame(dtSex,index=["ชาย","หญิง"])
 st.bar_chart(dtSexb)
 
-import matplotlib.pyplot as plt
+import matplotlib.pyplot as plt #PIE
 labels = 'Men', 'Wumen'
 sizes = [NumM[1],NumF[1]]
 explode = (0, 0.1)  # only "explode" the 2nd slice (i.e. 'Hogs')
