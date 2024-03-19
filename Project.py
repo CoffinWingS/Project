@@ -20,6 +20,7 @@ st.write(dt.head(10))
 
 if(st.button("แสดงข้อมูลตัวอย่าง")):
     st.write(dt.head(100))
+    st.button("ปิดข้อมูล")
 
 else:
     st.button("ปิดข้อมูล")
