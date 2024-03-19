@@ -27,10 +27,10 @@ else:
 
 
 # เพิ่มตัวเลือกสำหรับผู้ใช้ในการเลือกปี
-dt = st.sidebar.selectbox("เลือกปี", data["ปี"].unique())
+year_option = st.sidebar.selectbox("เลือกปี", dt["ปี"].unique())
 
 # กรองข้อมูลตามปี
-filtered_df = data[data["ปี"] == year_option]
+filtered_df = dt[dt["ปี"] == year_option]
 
 # แสดงกราฟแท่ง
 fig1, ax1 = plt.subplots()
