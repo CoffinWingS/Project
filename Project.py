@@ -16,7 +16,14 @@ with col2:
 
 dt=pd.read_excel('data/DATA.xlsx')
 
-st.write(dt.head(1))
+st.write(dt.head(10))
+
+if(st.button("แสดงข้อมูลตัวอย่าง")):
+    st.write(dt.head(100))
+    st.button("ไม่แสดงข้อมูลตัวอย่าง")
+
+else:
+    st.button("ไม่แสดงข้อมูลตัวอย่าง")
 
 #st.write
 NumM=dt[dt['Sex']=='ชาย'].count()
