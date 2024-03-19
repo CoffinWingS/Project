@@ -29,8 +29,8 @@ else:
 if(st.button("แสดงกราฟแท่ง")):
     chart_data = pd.DataFrame(
     {
-        "ปีการเสียชีวิต": df['Dead Year_ปีที่เสียชีวิต'],
-        "เพศ": df['Sex'],
+        "ปีการเสียชีวิต": dt['Dead Year_ปีที่เสียชีวิต'],
+        "เพศ": dt['Sex'],
        # "ความยาว": df['sepal.length']    
         }
     )
