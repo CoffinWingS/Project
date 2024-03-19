@@ -35,14 +35,14 @@ col1, col2 = st.columns(2)
 
 with col1:
     st.subheader("จำนวนผู้เสียชีวิต")
-    st.write(filtered_df["เสียชีวิต"].sum())
+    st.subheader(NumM[1])
 
 with col2:
     st.subheader("จำนวนผู้บาดเจ็บ")
-    st.write(filtered_df["บาดเจ็บ"].sum())
+    st.subheader(NumM[1])
 
 
-#st.write
+#st.write กราฟแท่ง
 NumM=dt[dt['Sex']=='ชาย'].count()
 NumF=dt[dt['Sex']=='หญิง'].count()
 
