@@ -25,20 +25,6 @@ if(st.button("แสดงข้อมูลตัวอย่าง")):
 else:
     st.button("ปิดข้อมูล")
 
-# เพิ่มตัวเลือกสำหรับผู้ใช้ในการกรองข้อมูล
-gender_option = st.sidebar.selectbox("เลือกเพศ", ["ชาย", "หญิง"])
-
-filtered_df = dt[dt["Sex"] == gender_option]
-
-# แสดงจำนวนผู้เสียชีวิตและบาดเจ็บแยกตามเพศ
-col1, col2 = st.columns(2)
-
-with col1:
-    st.subheader("จำนวนผู้เสียชีวิต")
-
-with col2:
-    st.subheader("จำนวนผู้บาดเจ็บ")
-
 
 #st.write กราฟแท่ง
 NumM=dt[dt['Sex']=='ชาย'].count()
