@@ -35,7 +35,7 @@ col1, col2 = st.columns(2)
 
 with col1:
     st.subheader("จำนวนผู้เสียชีวิต")
-    st.write(filtered_df["เสียชีวิต"].mean())
+    st.write(dtSex,index=["เสียชีวิต"].mean())
 
 with col2:
     st.subheader("จำนวนผู้บาดเจ็บ")
