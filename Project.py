@@ -39,7 +39,7 @@ dtSexb=pd.DataFrame(dtSex,index=["ชาย","หญิง"])
 st.bar_chart(dtSexb)
 
 import matplotlib.pyplot as plt #PIE
-labels = 'Men', 'Wumen'
+labels = 'ชาย', 'หญิง'
 sizes = [NumM[1],NumF[1]]
 explode = (0, 0.1)  # only "explode" the 2nd slice (i.e. 'Hogs')
 
