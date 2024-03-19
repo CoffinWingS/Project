@@ -25,25 +25,21 @@ if(st.button("แสดงข้อมูลตัวอย่าง")):
 else:
     st.button("ปิดข้อมูล")
 
-# แสดงชื่อเว็บแอปพลิเคชัน
-st.title("สถิติการเกิดอุบัติเหตุในประเทศไทย")
+# เพิ่มตัวเลือกสำหรับผู้ใช้ในการกรองข้อมูล
+gender_option = st.sidebar.selectbox("เลือกเพศ", ["ชาย", "หญิง"])
 
-# เพิ่มตัวเลือกสำหรับผู้ใช้ในการเลือกปี
-year_options = dt["Dead Year_ปีที่เสียชีวิต"].unique()
-selected_year = st.sidebar.selectbox("เลือกปี", year_options)
+filtered_df = dt[dt["Sex"] == gender_option]
 
-# เพิ่มตัวเลือกสำหรับผู้ใช้ในการเลือกเพศ
-#gender_options = ["ชาย", "หญิง"]
-#selected_gender = st.sidebar.selectbox("เลือกเพศ", gender_options)
+# แสดงจำนวนผู้เสียชีวิตและบาดเจ็บแยกตามเพศ
+col1, col2 = st.columns(2)
 
-# กรองข้อมูลตามปีและเพศ
-#filtered_df = dt[(dt["Dead Year_ปีที่เสียชีวิต"] == selected_year) & (dt["Sex"] == selected_gender)]
+with col1:
+    st.subheader("จำนวนผู้เสียชีวิต")
+    st.write(filtered_df["เสียชีวิต"].sum())
 
-# แสดงกราฟแท่ง
-#st.bar_chart(filtered_df.groupby("Dead Month_เดือนที่เสียชีวิต").size())
-
-# แสดงข้อมูลตาราง
-#st.dataframe(filtered_df)
+with col2:
+    st.subheader("จำนวนผู้บาดเจ็บ")
+    st.write(filtered_df["บาดเจ็บ"].sum())
 
 
 #st.write
