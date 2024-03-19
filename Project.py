@@ -1,4 +1,4 @@
-import streamlit as st
+ import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
 
@@ -35,11 +35,11 @@ col1, col2 = st.columns(2)
 
 with col1:
     st.subheader("จำนวนผู้เสียชีวิต")
-    st.subheader(NumM[1])
+    st.write(filtered_df["เสียชีวิต"].mean())
 
 with col2:
     st.subheader("จำนวนผู้บาดเจ็บ")
-    st.subheader(NumM[1])
+    st.write(filtered_df["เสียชีวิต"].mean())
 
 
 #st.write กราฟแท่ง
@@ -63,4 +63,5 @@ fig1, ax1 = plt.subplots()
 ax1.pie(sizes, explode=explode, labels=labels, autopct='%1.1f%%',
         shadow=True, startangle=90)
 st.pyplot(fig1)
+
 
